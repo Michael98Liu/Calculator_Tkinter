@@ -1,0 +1,56 @@
+import tkinter as tk
+from tkinter import *
+from tkinter import ttk
+
+root = Tk()
+
+result = StringVar()
+result.set(0)
+
+windowframe = ttk.Frame(root)
+windowframe.pack()
+window = ttk.Label(windowframe, text = result.get(), anchor = 'w', justify = RIGHT, font = ('Courier', 18, 'bold'))
+window.pack(anchor = 'e')
+buttons = ttk.Frame(root)
+buttons.pack()
+
+
+deleteall = tk.Button(buttons, text = 'C', width = 6, height = 3)
+deleteall.grid(row = 0, column = 0)
+deleteone = tk.Button(buttons, text = 'Del', width = 6, height = 3)
+deleteone.grid(row = 0, column = 1)
+divide = tk.Button(buttons, text = '\\', width = 6, height = 3)
+divide.grid(row = 0, column = 2)
+multiply = tk.Button(buttons, text = '*', width = 6, height = 3)
+multiply.grid(row = 0, column = 3)
+seven = tk.Button(buttons, text = '7', width = 6, height = 3)
+seven.grid(row = 1, column = 0)
+eight = tk.Button(buttons, text = '8', width = 6, height = 3)
+eight.grid(row = 1, column = 1)
+nine = tk.Button(buttons, text = '9', width = 6, height = 3)
+nine.grid(row = 1, column = 2)
+minus = tk.Button(buttons, text = '-', width = 6, height = 3)
+minus.grid(row = 1, column = 3)
+four = tk.Button(buttons, text = '4', width = 6, height = 3)
+four.grid(row = 2, column = 0)
+five = tk.Button(buttons, text = '5', width = 6, height = 3)
+five.grid(row = 2, column = 1)
+six = tk.Button(buttons, text = '6', width = 6, height = 3)
+six.grid(row = 2, column = 2)
+plus = tk.Button(buttons, text = '+', width = 6, height = 3)
+plus.grid(row = 2, column = 3)
+one = tk.Button(buttons, text = '1', width = 6, height = 3)
+one.grid(row = 3, column = 0)
+two = tk.Button(buttons, text = '2', width = 6, height = 3)
+two.grid(row = 3, column = 1)
+one = tk.Button(buttons, text = '3', width = 6, height = 3)
+one.grid(row = 3, column = 2)
+zero = tk.Button(buttons, text = '0', width = 13, height = 3)
+zero.grid(row = 4, column = 0, columnspan = 2)
+dot = tk.Button(buttons, text = '.', width = 6, height = 3)
+dot.grid(row = 4, column = 2)
+equal = tk.Button(buttons, text = '=', width = 6, height = 7)
+equal.grid(row = 3, column = 3, rowspan = 2)
+
+
+root.mainloop()
